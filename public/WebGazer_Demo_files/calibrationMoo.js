@@ -28,7 +28,7 @@ function PopUpInstruction(){
 
 }
 /**
-  * Show the help instructions right at the start.
+  * Show the help i2nstructions right at the start.
   */
 function helpModalShow() {
     $('#helpModal').modal('show');
@@ -39,6 +39,47 @@ document.getElementById("stuff").hidden = false;
 document.getElementById("yeet").hidden = true;
 console.log("HI LYDIA");
  }
+ 
+var cows = [];
+function myBitch(){
+          for(var i = 0; i < 100; i++){
+            var prediction = webgazer.getCurrentPrediction();
+              if (prediction) {
+                var x = prediction.x;
+                var y = prediction.y;
+                // console.log("yas bitch");
+              }
+              
+              if(x <= 450 && y <= 448){
+                console.log("q1");
+                cows.push("q1");
+              }
+              else if(450 < x && x <= 900 && y <= 448){
+                console.log("q2");
+                cows.push("q2");
+              }
+              else if(900 < x && x <=1350 && y <=448){
+                console.log("q3");
+                cows.push("q3");
+              }
+               else if(x <=450 && y >= 450 && y <= 896){
+                console.log("q4");
+                cows.push("q4");
+              }
+               else if(450 < x && x <= 900 && y >= 450 && y <= 896){
+                console.log("q5");
+                cows.push("q5");
+              }
+               else if(900 < x && x <=1350 && y <=450 && y <= 896){
+                console.log("q6");
+                cows.push("q6");
+              }
+          }
+        }
+
+// function checkThisBitchOut(){
+//   console.log(modeBitch);
+// }
 /**
  * Load this function when the index page starts.
 * This function listens for button clicks on the html page
@@ -108,6 +149,7 @@ $(document).ready(function(){
                           confirm: true,
                         }
                       }).then(isConfirm => {
+                        
                           if (isConfirm){
                             //clear the calibration & hide the last middle button
                             ClearCanvas();
@@ -118,6 +160,7 @@ $(document).ready(function(){
                             ClearCanvas();
                             ShowCalibrationPoint();
                           }
+                            myBitch();
                       });
                   });
                 });

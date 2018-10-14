@@ -298,22 +298,12 @@ a:focus, a:hover {
     padding-top: 25%;
     padding-bottom: 25%;
 }
-/*.left {*/
-/*    left: 20%;*/
-/*}*/
-/*.right {*/
-/*    right: 20%;*/
-/*}*/
+
 table, td {
     text-align: center;
     border: 3px solid black;
     border-collapse: collapse;
 }
-
-/*table img  {*/
-/*    width: 400px;*/
-/*    height: 300px;*/
-/*}*/
 
 td {
     width: 50%;
@@ -330,6 +320,12 @@ td {
 .show {
   /*display: block;*/
   visibility: visible;
+}
+
+#sent {
+  background-image: linear-gradient(#FF9603, #FCEF00);
+  padding: 2rem;
+  height: 89vh;
 }
 footer {
   padding: 3rem 0;

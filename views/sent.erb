@@ -19,23 +19,25 @@
 
     <!-- Custom styles for this template -->
     <!--<link rel="stylesheet" href="css/grayscale.min.css">-->
-    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/style3.css">
 
 
 </head>
 
   <body>
-    <h1>Sent to <%=@reciepient%>!</h1>
-    <h1>Message: <%=@message%></h1>
+    <section id="sent">
+      <h1>Sent!</h1>
+      <h1><%=@message%></h1>
+      <br><br>
+      <h4><a href="/landing">Send another message</a></h4>
+    </section>
 
-<!--<embed src="hello_world.wav">-->
      <!-- Footer -->
     <footer class="bg-black small text-center text-white-50">
       <div class="container" style="color:white">
         Copyright &copy; VITAMIN SEE 2018
       </div>
     </footer>
-
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script type="text/script" src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

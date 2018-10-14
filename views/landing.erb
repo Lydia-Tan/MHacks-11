@@ -32,7 +32,7 @@
 
     <!-- Custom styles for this template -->
     <!--<link rel="stylesheet" href="css/grayscale.min.css">-->
-    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/style3.css">
     <script async="" type="text/javascript" src="WebGazer_Demo_files/webgazer.js"></script>
 
 
@@ -59,10 +59,10 @@
       // document.getElementById("td5").height = sH;
       // document.getElementById("td6").height = sH;
       
-      var message = "Message:";
-          // document.getElementById("message1").setAttribute('parameter', message);
-          document.getElementById("message1").setAttribute('value', message);
-          document.getElementById("message2").innerHTML=message;
+      // var message = "Message:";
+      //     // document.getElementById("message1").setAttribute('parameter', message);
+      //     document.getElementById("message1").setAttribute('value', message);
+      //     document.getElementById("message2").innerHTML=message;
       
       function playAudio(audioID) {
         var audio1 = document.getElementById(audioID);
@@ -70,51 +70,12 @@
       }
     </script>
 
-    <script>
-          
-          // function noshow(table1, table2, word) {
-          //     var addMessage = word;
-              
-          //     var id1 = document.getElementById(table1);
-          //     var id2 = document.getElementById(table2);
-          //     // if (addMessage != '') {
-          //         message = message + " " + addMessage;
-          //     // }
-          //     $(id1).addClass('noshow');
-          //     $(id2).removeClass('noshow');
-          //     $(id2).addClass('show');
-          //     document.getElementById("message1").setAttribute('value', message);
-          //     document.getElementById("message2").innerHTML=message;
-          //     document.getElementById("message3").setAttribute('value', message);
-          //     document.getElementById("message4").innerHTML=message;
-          //     document.getElementById("message5").setAttribute('value', message);
-          //     document.getElementById("message6").innerHTML=message;
-          //     document.getElementById("message7").setAttribute('value', message);
-          //     document.getElementById("message8").innerHTML=message;
-          // }
-          
-          function del(message) {
-            var pos = message.lastIndexOf(" ");
-            if (pos != -1) {
-              message = message.substring(0, pos);
-            }
-            document.getElementById("message1").setAttribute('value', message);
-            document.getElementById("message2").innerHTML=message;
-            document.getElementById("message3").setAttribute('value', message);
-            document.getElementById("message4").innerHTML=message;
-            document.getElementById("message5").setAttribute('value', message);
-            document.getElementById("message6").innerHTML=message;
-            document.getElementById("message7").setAttribute('value', message);
-            document.getElementById("message8").innerHTML=message;
-          }
-        
-      </script>
 
       <div id ="stuff" hidden="true">
         <table style="width:100%" id="bins">
             <tr id="row">
-              <td onclick="delete()"><br style="line-height:1.3"><br>
-                Delete
+              <td valign = "bottom" id="mess" onclick="del()"><br style="line-height:1.3">
+                <img src="img/Delete.png"/>
               </td>
               <td style="width:auto; height:auto" onmouseover="playAudio('body')" onclick="noshow('bins', 'body_parts', '')"><img src="img/Body_Parts_3.png"/>
                   <audio id="body">
@@ -128,17 +89,16 @@
               </td>
             </tr>
             <tr id="row">
-              <td onclick="document.getElementById('0').submit();"><form method="POST" action="/sent" id="0">
+              <td style="align:center" onclick="document.getElementById('0').submit();"><img src="img/Send.png"/><form method="POST" action="/sent" id="0">
                   <input id="message1" type="hidden" name="message" value="">
               </form>
-              <br>Send
               </td>
               <td style="width:auto; height:auto" onmouseenter="playAudio('yum')" onclick="noshow('bins', 'food', '');"><img src="img/Food1.png"/>
                 <audio id="yum">
                   <source src="audio/food.ogg" type="audio/ogg">
                 </audio>
               </td>
-              <td style="width:auto; height:auto" onmouseover="playAudio('please')" onclick="/help"><img src="img/Help.png"/>
+              <td style="width:auto; height:auto" onmouseover="playAudio('please')" onclick="location.href = '/help'"><img src="img/Help.png"/>
                 <audio id="please">
                   <source src="audio/help.ogg" type="audio/ogg">
                 </audio>
@@ -147,104 +107,97 @@
 
         <table style="width:100%" id="body_parts" class="noshow">
             <tr id="row">
-              <td style="width:auto; height:auto" onmouseover="playAudio('head')" onclick="noshow('body_parts', 'bins', 'head');"><img src="img/Head3.png"/>
-                <audio id="head">
-                  <source src="audio/head.ogg" type="audio/ogg">
-                </audio>
+              <td >
+                <img src="img/Head3.png"/>
               </td>
-              <td style="width:auto; height:auto" onmouseover="playAudio('face')" onclick="noshow('body_parts', 'bins', 'face');"><img src="img/Face3.png"/>
+              <td onmouseover="playAudio('face')" onclick="noshow('body_parts', 'bins', 'face');"><img src="img/Face3.png"/>
                 <audio id="face">
                   <source src="audio/face.ogg" type="audio/ogg">
                 </audio>
               </td>
-              <td style="width:auto; height:auto" onmouseover="playAudio('chest')" onclick="noshow('body_parts', 'bins', 'chest');"><img src="img/Chest3.png"/>
+              <td onmouseover="playAudio('chest')" onclick="noshow('body_parts', 'bins', 'chest');"><img src="img/Chest3.png"/>
                 <audio id="chest">
                   <source src="audio/chest.ogg" type="audio/ogg">
                 </audio>
               </td>
-              <td style="width:auto; height:auto" onmouseover="playAudio('back')" onclick="noshow('body_parts', 'bins', 'back');"><img src="img/Back3.png"/>
+              <td onmouseover="playAudio('back')" onclick="noshow('body_parts', 'bins', 'back');"><img src="img/Back3.png"/>
                 <audio id="back">
                   <source src="audio/back.ogg" type="audio/ogg">
                 </audio></td>
             </tr>
             <tr id="row">
-              <td  style="width:auto; height:auto" onmouseover="playAudio('arm')" onclick="noshow('body_parts', 'bins', 'arm');"><img src="img/Arm3.png"/>
+              <td onmouseover="playAudio('arm')" onclick="noshow('body_parts', 'bins', 'arm');"><img src="img/Arm3.png"/>
                 <audio id="arm">
                   <source src="audio/arm.ogg" type="audio/ogg">
                 </audio>
               </td>
-              <td style="width:auto; height:auto" onmouseover="playAudio('leg')" onclick="noshow('body_parts', 'bins', 'leg');"><img src="img/Leg3.png"/>
+              <td onmouseover="playAudio('leg')" onclick="noshow('body_parts', 'bins', 'leg');"><img src="img/Leg3.png"/>
                 <audio id="leg">
                   <source src="audio/leg.ogg" type="audio/ogg">
                 </audio>
               </td>
-              <td style="width:auto; height:auto" onmouseover="playAudio('shoulder')" onclick="noshow('body_parts', 'bins', 'shoulder');"><img src="img/Shoulder3.png"/>
+              <td onmouseover="playAudio('shoulder')" onclick="noshow('body_parts', 'bins', 'shoulder');"><img src="img/Shoulder3.png"/>
                 <audio id="shoulder">
                   <source src="audio/shoulder.ogg" type="audio/ogg">
                 </audio>
               </td>
-              <td  onclick="document.getElementById('0').submit();">
+              <td style="align:center" onclick="document.getElementById('0').submit();"><img src="img/Send.png"/>
                 <form method="POST" action="/sent" id="0">
                   <input id="message3" type="hidden" name="message" value="">
                 </form>
-                <br>Send
               </td>
             </tr>
         </table>
     
         <table style="width:100%" id="feelings" class="noshow">
             <tr id="row">
-              <td style="width:auto; height:auto" onmouseover="playAudio('sad')" onclick="noshow('feelings', 'bins', 'sad');"><img src="img/Sad.png"/>
-                <audio id="sad">
-                  <source src="audio/sad.ogg" type="audio/ogg">
-                </audio>
+              <td>
+                <img src="img/Sad.png"/>
               </td>
-              <td style="width:auto; height:auto" onmouseover="playAudio('happy')" onclick="noshow('feelings', 'bins', 'happy');"><img src="img/Happy.png"/>
+              <td onmouseover="playAudio('happy')" onclick="noshow('feelings', 'bins', 'happy');"><img src="img/Happy.png"/>
                 <audio id="happy">
                   <source src="audio/happy.ogg" type="audio/ogg">
                 </audio>
               </td>
-              <td style="width:auto; height:auto" onmouseover="playAudio('upset')" onclick="noshow('feelings', 'bins', 'upset');"><img src="img/Upset.png"/>
+              <td onmouseover="playAudio('upset')" onclick="noshow('feelings', 'bins', 'upset');"><img src="img/Upset.png"/>
                 <audio id="upset">
                   <source src="audio/upset.ogg" type="audio/ogg">
                 </audio>
               </td>
-              <td style="width:auto; height:auto" onmouseover="playAudio('tired')" onclick="noshow('feelings', 'bins', 'tired');"><img src="img/Tired.png"/>
+              <td onmouseover="playAudio('tired')" onclick="noshow('feelings', 'bins', 'tired');"><img src="img/Tired.png"/>
                 <audio id="tired">
                   <source src="audio/tired.ogg" type="audio/ogg">
                 </audio>
               </td>
             </tr>
             <tr id="row">
-              <td style="width:auto; height:auto" onmouseover="playAudio('afraid')" onclick="noshow('feelings', 'bins', 'afraid');"><img src="img/Worried.png"/>
+              <td onmouseover="playAudio('afraid')" onclick="noshow('feelings', 'bins', 'afraid');"><img src="img/Worried.png"/>
                 <audio id="afraid">
                   <source src="audio/afraid.ogg" type="audio/ogg">
                 </audio>
               </td>
-              <td style="width:auto; height:auto" onmouseover="playAudio('hungry')" onclick="noshow('feelings', 'bins', 'hungry');"><img src="img/Hungry.png"/>
+              <td onmouseover="playAudio('hungry')" onclick="noshow('feelings', 'bins', 'hungry');"><img src="img/Hungry.png"/>
                 <audio id="hungry">
                   <source src="audio/hungry.ogg" type="audio/ogg">
                 </audio>
               </td>
-              <td style="width:auto; height:auto" onmouseover="playAudio('thirsty')" onclick="noshow('feelings', 'bins', 'thirsty');"><img src="img/Thirsty.png"/>
+              <td onmouseover="playAudio('thirsty')" onclick="noshow('feelings', 'bins', 'thirsty');"><img src="img/Thirsty.png"/>
                 <audio id="thirsty">
                   <source src="audio/thirsty.ogg" type="audio/ogg">
                 </audio>
               </td>
-              <td onclick="document.getElementById('0').submit();"><form method="POST" action="/sent" id="0">
+              <td style="align:center" onclick="document.getElementById('0').submit();"><img src="img/Send.png"/>
+                <form method="POST" action="/sent" id="0">
                   <input id="message5" type="hidden" name="message" value="">
-              </form>
-              <br>Send
+                </form>
               </td>
             </tr>
         </table>
         
-        <table style="width:100%; height: 100vh" id="food" class="noshow">
+        <table style="width:100%" id="food" class="noshow">
             <tr id="row">
-              <td onmouseover="playAudio('soup')" onclick="noshow('food', 'bins', 'soup');"><img src="img/Soup.png"/>
-              <audio id="soup">
-                  <source src="audio/soup.ogg" type="audio/ogg">
-              </audio>
+              <td>
+                <img src="img/Soup.png"/>
               </td>
               <td onmouseover="playAudio('sushi')" onclick="noshow('food', 'bins', 'sushi');"><img src="img/Sushi.png"/>
               <audio id="sushi">
@@ -260,10 +213,11 @@
               </audio></td>
             </tr>
             <tr id="row">
-              <td onmouseover="playAudio('ice')" onclick="noshow('food', 'bins', 'ice cream');"></td><img src="img/IceCrea.png"/>
-              <audio id="ice">
+              <td onmouseover="playAudio('ice')" onclick="noshow('food', 'bins', 'ice cream');"><img src="img/Ice_Cream.png"/>
+                <audio id="ice">
                   <source src="audio/ice_cream.ogg" type="audio/ogg">
-              </audio></td>
+                </audio>
+              </td>
               <td onmouseover="playAudio('bread')" onclick="noshow('food', 'bins', 'bread');"><img src="img/Bread.png"/>
               <audio id="bread">
                   <source src="audio/bread.ogg" type="audio/ogg">
@@ -272,17 +226,17 @@
               <audio id="water">
                   <source src="audio/water.ogg" type="audio/ogg">
               </audio></td>
-              <td onclick="document.getElementById('0').submit();"><form method="POST" action="/sent" id="0">
+              <td style="align:center" onclick="document.getElementById('0').submit();"><img src="img/Send.png"/>
+                <form method="POST" action="/sent" id="0">
                   <input id="message7" type="hidden" name="message" value="">
-              </form>
-              <br>Send
+                </form>
               </td>
             </tr>
         </table>
         <h4 id="message2"></h4>
           <script>
               var message = "<%=@message%>";
-              // document.getElementById("message1").setAttribute('parameter', message);
+              // document.getElementById("mess").setAttribute('parameter', message);
               document.getElementById("message1").setAttribute('value', message);
               document.getElementById("message2").innerHTML=message;
               
@@ -304,26 +258,23 @@
                   document.getElementById("message5").setAttribute('value', message);
                   document.getElementById("message7").setAttribute('value', message);
               }
-          </script>
 
               
               
-    <!--          function del(message) {-->
-    <!--            var pos = message.lastIndexOf(" ");-->
-    <!--            if (pos != -1) {-->
-    <!--              message = message.substring(0, pos);-->
-    <!--            }-->
-    <!--            document.getElementById("message1").setAttribute('value', message);-->
-    <!--            document.getElementById("message2").innerHTML=message;-->
-    <!--            document.getElementById("message3").setAttribute('value', message);-->
-    <!--            document.getElementById("message4").innerHTML=message;-->
-    <!--            document.getElementById("message5").setAttribute('value', message);-->
-    <!--            document.getElementById("message6").innerHTML=message;-->
-    <!--            document.getElementById("message7").setAttribute('value', message);-->
-    <!--            document.getElementById("message8").innerHTML=message;-->
-    <!--          }-->
+              function del() {
+                console.log(message)
+                var pos = message.lastIndexOf(" ");
+                if (pos != -1) {
+                  message = message.substring(0, pos);
+                }
+                document.getElementById("message1").setAttribute('value', message);
+                document.getElementById("message2").innerHTML=message;
+                document.getElementById("message3").setAttribute('value', message);
+                document.getElementById("message5").setAttribute('value', message);
+                document.getElementById("message7").setAttribute('value', message);
+              }
             
-    <!--      </script>-->
+          </script>
 </div>
 
 
@@ -335,7 +286,7 @@
         <script src="WebGazer_Demo_files/sweetalert.min.js"></script>
 
         <script src="WebGazer_Demo_files/main.js"></script>
-        <script src="WebGazer_Demo_files/calibration.js"></script>
+        <script src="WebGazer_Demo_files/calibrationMoo.js"></script>
         <script src="WebGazer_Demo_files/precision_calculation.js"></script>
         <script src="WebGazer_Demo_files/precision_store_points.js"></script>
 
