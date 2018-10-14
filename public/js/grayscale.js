@@ -16,10 +16,10 @@
     });
 
     // Activate scrollspy to add active class to navbar items on scroll
-    $('body').scrollspy({
-        target: '#mainNav',
-        offset: 54
-    });
+    // $('body').scrollspy({
+    //     target: '#mainNav',
+    //     offset: 54
+    // });
 
     // Closes responsive menu when a link is clicked
     $('.navbar-collapse>ul>li>a').click(function() {
@@ -28,7 +28,7 @@
 
     // Collapse the navbar when page is scrolled
     $(window).scroll(function() {
-        if ($("#mainNav").offset().top > 100) {
+        if ($("#mainNav").offset().top > 50) {
             $("#mainNav").addClass("navbar-shrink");
         } else {
             $("#mainNav").removeClass("navbar-shrink");
@@ -36,7 +36,7 @@
     });
 
 })(jQuery); // End of use strict
-
+/*
 // Google Maps Scripts
 var map = null;
 // When the window has finished loading create our google map below
@@ -188,3 +188,4 @@ function init() {
         icon: image
     });
 }
+*/

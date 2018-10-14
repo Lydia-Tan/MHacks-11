@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" class="gr__webgazer_cs_brown_edu">
+
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.swal-icon--error{border-color:#f27474;-webkit-animation:animateErrorIcon .5s;animation:animateErrorIcon .5s}.swal-icon--error__x-mark{position:relative;display:block;-webkit-animation:animateXMark .5s;animation:animateXMark .5s}.swal-icon--error__line{position:absolute;height:5px;width:47px;background-color:#f27474;display:block;top:37px;border-radius:2px}.swal-icon--error__line--left{-webkit-transform:rotate(45deg);transform:rotate(45deg);left:17px}.swal-icon--error__line--right{-webkit-transform:rotate(-45deg);transform:rotate(-45deg);right:16px}@-webkit-keyframes animateErrorIcon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}to{-webkit-transform:rotateX(0deg);transform:rotateX(0deg);opacity:1}}@keyframes animateErrorIcon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}to{-webkit-transform:rotateX(0deg);transform:rotateX(0deg);opacity:1}}@-webkit-keyframes animateXMark{0%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}50%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}80%{-webkit-transform:scale(1.15);transform:scale(1.15);margin-top:-6px}to{-webkit-transform:scale(1);transform:scale(1);margin-top:0;opacity:1}}@keyframes animateXMark{0%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}50%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}80%{-webkit-transform:scale(1.15);transform:scale(1.15);margin-top:-6px}to{-webkit-transform:scale(1);transform:scale(1);margin-top:0;opacity:1}}.swal-icon--warning{border-color:#f8bb86;-webkit-animation:pulseWarning .75s infinite alternate;animation:pulseWarning .75s infinite alternate}.swal-icon--warning__body{width:5px;height:47px;top:10px;border-radius:2px;margin-left:-2px}.swal-icon--warning__body,.swal-icon--warning__dot{position:absolute;left:50%;background-color:#f8bb86}.swal-icon--warning__dot{width:7px;height:7px;border-radius:50%;margin-left:-4px;bottom:-11px}@-webkit-keyframes pulseWarning{0%{border-color:#f8d486}to{border-color:#f8bb86}}@keyframes pulseWarning{0%{border-color:#f8d486}to{border-color:#f8bb86}}.swal-icon--success{border-color:#a5dc86}.swal-icon--success:after,.swal-icon--success:before{content:"";border-radius:50%;position:absolute;width:60px;height:120px;background:#fff;-webkit-transform:rotate(45deg);transform:rotate(45deg)}.swal-icon--success:before{border-radius:120px 0 0 120px;top:-7px;left:-33px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:60px 60px;transform-origin:60px 60px}.swal-icon--success:after{border-radius:0 120px 120px 0;top:-11px;left:30px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:0 60px;transform-origin:0 60px;-webkit-animation:rotatePlaceholder 4.25s ease-in;animation:rotatePlaceholder 4.25s ease-in}.swal-icon--success__ring{width:80px;height:80px;border:4px solid hsla(98,55%,69%,.2);border-radius:50%;box-sizing:content-box;position:absolute;left:-4px;top:-4px;z-index:2}.swal-icon--success__hide-corners{width:5px;height:90px;background-color:#fff;padding:1px;position:absolute;left:28px;top:8px;z-index:1;-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}.swal-icon--success__line{height:5px;background-color:#a5dc86;display:block;border-radius:2px;position:absolute;z-index:2}.swal-icon--success__line--tip{width:25px;left:14px;top:46px;-webkit-transform:rotate(45deg);transform:rotate(45deg);-webkit-animation:animateSuccessTip .75s;animation:animateSuccessTip .75s}.swal-icon--success__line--long{width:47px;right:8px;top:38px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-animation:animateSuccessLong .75s;animation:animateSuccessLong .75s}@-webkit-keyframes rotatePlaceholder{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}to{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@keyframes rotatePlaceholder{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}to{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@-webkit-keyframes animateSuccessTip{0%{width:0;left:1px;top:19px}54%{width:0;left:1px;top:19px}70%{width:50px;left:-8px;top:37px}84%{width:17px;left:21px;top:48px}to{width:25px;left:14px;top:45px}}@keyframes animateSuccessTip{0%{width:0;left:1px;top:19px}54%{width:0;left:1px;top:19px}70%{width:50px;left:-8px;top:37px}84%{width:17px;left:21px;top:48px}to{width:25px;left:14px;top:45px}}@-webkit-keyframes animateSuccessLong{0%{width:0;right:46px;top:54px}65%{width:0;right:46px;top:54px}84%{width:55px;right:0;top:35px}to{width:47px;right:8px;top:38px}}@keyframes animateSuccessLong{0%{width:0;right:46px;top:54px}65%{width:0;right:46px;top:54px}84%{width:55px;right:0;top:35px}to{width:47px;right:8px;top:38px}}.swal-icon--info{border-color:#c9dae1}.swal-icon--info:before{width:5px;height:29px;bottom:17px;border-radius:2px;margin-left:-2px}.swal-icon--info:after,.swal-icon--info:before{content:"";position:absolute;left:50%;background-color:#c9dae1}.swal-icon--info:after{width:7px;height:7px;border-radius:50%;margin-left:-3px;top:19px}.swal-icon{width:80px;height:80px;border-width:4px;border-style:solid;border-radius:50%;padding:0;position:relative;box-sizing:content-box;margin:20px auto}.swal-icon:first-child{margin-top:32px}.swal-icon--custom{width:auto;height:auto;max-width:100%;border:none;border-radius:0}.swal-icon img{max-width:100%;max-height:100%}.swal-title{color:rgba(0,0,0,.65);font-weight:600;text-transform:none;position:relative;display:block;padding:13px 16px;font-size:27px;line-height:normal;text-align:center;margin-bottom:0}.swal-title:first-child{margin-top:26px}.swal-title:not(:first-child){padding-bottom:0}.swal-title:not(:last-child){margin-bottom:13px}.swal-text{font-size:16px;position:relative;float:none;line-height:normal;vertical-align:top;text-align:left;display:inline-block;margin:0;padding:0 10px;font-weight:400;color:rgba(0,0,0,.64);max-width:calc(100% - 20px);overflow-wrap:break-word;box-sizing:border-box}.swal-text:first-child{margin-top:45px}.swal-text:last-child{margin-bottom:45px}.swal-footer{text-align:right;padding-top:13px;margin-top:13px;padding:13px 16px;border-radius:inherit;border-top-left-radius:0;border-top-right-radius:0}.swal-button-container{margin:5px;display:inline-block;position:relative}.swal-button{background-color:#7cd1f9;color:#fff;border:none;box-shadow:none;border-radius:5px;font-weight:600;font-size:14px;padding:10px 24px;margin:0;cursor:pointer}.swal-button[not:disabled]:hover{background-color:#78cbf2}.swal-button:active{background-color:#70bce0}.swal-button:focus{outline:none;box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(43,114,165,.29)}.swal-button[disabled]{opacity:.5;cursor:default}.swal-button::-moz-focus-inner{border:0}.swal-button--cancel{color:#555;background-color:#efefef}.swal-button--cancel[not:disabled]:hover{background-color:#e8e8e8}.swal-button--cancel:active{background-color:#d7d7d7}.swal-button--cancel:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(116,136,150,.29)}.swal-button--danger{background-color:#e64942}.swal-button--danger[not:disabled]:hover{background-color:#df4740}.swal-button--danger:active{background-color:#cf423b}.swal-button--danger:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(165,43,43,.29)}.swal-content{padding:0 20px;margin-top:20px;font-size:medium}.swal-content:last-child{margin-bottom:20px}.swal-content__input,.swal-content__textarea{-webkit-appearance:none;background-color:#fff;border:none;font-size:14px;display:block;box-sizing:border-box;width:100%;border:1px solid rgba(0,0,0,.14);padding:10px 13px;border-radius:2px;transition:border-color .2s}.swal-content__input:focus,.swal-content__textarea:focus{outline:none;border-color:#6db8ff}.swal-content__textarea{resize:vertical}.swal-button--loading{color:transparent}.swal-button--loading~.swal-button__loader{opacity:1}.swal-button__loader{position:absolute;height:auto;width:43px;z-index:2;left:50%;top:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);text-align:center;pointer-events:none;opacity:0}.swal-button__loader div{display:inline-block;float:none;vertical-align:baseline;width:9px;height:9px;padding:0;border:none;margin:2px;opacity:.4;border-radius:7px;background-color:hsla(0,0%,100%,.9);transition:background .2s;-webkit-animation:swal-loading-anim 1s infinite;animation:swal-loading-anim 1s infinite}.swal-button__loader div:nth-child(3n+2){-webkit-animation-delay:.15s;animation-delay:.15s}.swal-button__loader div:nth-child(3n+3){-webkit-animation-delay:.3s;animation-delay:.3s}@-webkit-keyframes swal-loading-anim{0%{opacity:.4}20%{opacity:.4}50%{opacity:1}to{opacity:.4}}@keyframes swal-loading-anim{0%{opacity:.4}20%{opacity:.4}50%{opacity:1}to{opacity:.4}}.swal-overlay{position:fixed;top:0;bottom:0;left:0;right:0;text-align:center;font-size:0;overflow-y:auto;background-color:rgba(0,0,0,.4);z-index:10000;pointer-events:none;opacity:0;transition:opacity .3s}.swal-overlay:before{content:" ";display:inline-block;vertical-align:middle;height:100%}.swal-overlay--show-modal{opacity:1;pointer-events:auto}.swal-overlay--show-modal .swal-modal{opacity:1;pointer-events:auto;box-sizing:border-box;-webkit-animation:showSweetAlert .3s;animation:showSweetAlert .3s;will-change:transform}.swal-modal{width:478px;opacity:0;pointer-events:none;background-color:#fff;text-align:center;border-radius:5px;position:static;margin:20px auto;display:inline-block;vertical-align:middle;-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;z-index:10001;transition:opacity .2s,-webkit-transform .3s;transition:transform .3s,opacity .2s;transition:transform .3s,opacity .2s,-webkit-transform .3s}@media (max-width:500px){.swal-modal{width:calc(100% - 20px)}}@-webkit-keyframes showSweetAlert{0%{-webkit-transform:scale(1);transform:scale(1)}1%{-webkit-transform:scale(.5);transform:scale(.5)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}to{-webkit-transform:scale(1);transform:scale(1)}}@keyframes showSweetAlert{0%{-webkit-transform:scale(1);transform:scale(1)}1%{-webkit-transform:scale(.5);transform:scale(.5)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}to{-webkit-transform:scale(1);transform:scale(1)}}</style>
+        
+        <title>Landing</title>
+        <!--<link rel="stylesheet" type="text/css" href="css/style.css">-->
+        <link rel="stylesheet" type="text/css" href="WebGazer_Demo_files/style.css">
+        <link rel="stylesheet" href="WebGazer_Demo_files/bootstrap.min.css">
+        
+        <!--<link rel="stylesheet" href="css/style1.css">-->
+    <style>
+    .gotham-myfont {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 100;
+    }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <!--<link rel="stylesheet" href="css/grayscale.min.css">-->
+    <link rel="stylesheet" href="css/style1.css">
+    <script async="" type="text/javascript" src="WebGazer_Demo_files/webgazer.js"></script>
+
+
+</head>
+  
+  <body lang="en-US" link="#0000ff" dir="LTR" data-gr-c-s-loaded="true" class ="">
+    <script>
+      // var body = document.body,
+      // html = document.documentElement;
+      // var height = Math.max( body.scrollHeight, body.offsetHeight, 
+      //                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+      
+      
+      // /* this is a Topcoat navigation bar and I get its height via offsetHeight of the surrounding <div> */
+      // var hTopBar = document.getElementById("pgTopBar").offsetHeight; 
+      
+      // var sH = Math.floor((height - hTopBar) / 2);
+      
+      
+      // document.getElementById("row").height = sH;
+      // document.getElementById("td2").height = sH;
+      // document.getElementById("td3").height = sH;
+      // document.getElementById("td4").height = sH;
+      // document.getElementById("td5").height = sH;
+      // document.getElementById("td6").height = sH;
+      
+      var message = "Message:";
+          // document.getElementById("message1").setAttribute('parameter', message);
+          document.getElementById("message1").setAttribute('value', message);
+          document.getElementById("message2").innerHTML=message;
+      
+      function playAudio(audioID) {
+        var audio1 = document.getElementById(audioID);
+        audio1.play();
+      }
+    </script>
+
+    <script>
+          
+          // function noshow(table1, table2, word) {
+          //     var addMessage = word;
+              
+          //     var id1 = document.getElementById(table1);
+          //     var id2 = document.getElementById(table2);
+          //     // if (addMessage != '') {
+          //         message = message + " " + addMessage;
+          //     // }
+          //     $(id1).addClass('noshow');
+          //     $(id2).removeClass('noshow');
+          //     $(id2).addClass('show');
+          //     document.getElementById("message1").setAttribute('value', message);
+          //     document.getElementById("message2").innerHTML=message;
+          //     document.getElementById("message3").setAttribute('value', message);
+          //     document.getElementById("message4").innerHTML=message;
+          //     document.getElementById("message5").setAttribute('value', message);
+          //     document.getElementById("message6").innerHTML=message;
+          //     document.getElementById("message7").setAttribute('value', message);
+          //     document.getElementById("message8").innerHTML=message;
+          // }
+          
+          function del(message) {
+            var pos = message.lastIndexOf(" ");
+            if (pos != -1) {
+              message = message.substring(0, pos);
+            }
+            document.getElementById("message1").setAttribute('value', message);
+            document.getElementById("message2").innerHTML=message;
+            document.getElementById("message3").setAttribute('value', message);
+            document.getElementById("message4").innerHTML=message;
+            document.getElementById("message5").setAttribute('value', message);
+            document.getElementById("message6").innerHTML=message;
+            document.getElementById("message7").setAttribute('value', message);
+            document.getElementById("message8").innerHTML=message;
+          }
+        
+      </script>
+
+      <div id ="stuff" hidden="true">
+        <table style="width:100%" id="bins">
+            <tr id="row">
+              <td onclick="delete()"><br style="line-height:1.3"><br>
+                Delete
+              </td>
+              <td style="width:auto; height:auto" onmouseover="playAudio('body')" onclick="noshow('bins', 'body_parts', '')"><img src="img/Body_Parts_3.png"/>
+                  <audio id="body">
+                    <source src="audio/body_parts.ogg" type="audio/ogg">
+                  </audio>
+              </td>
+              <td style="width:auto; height:auto" onmouseover="playAudio('feel')" onclick="noshow('bins', 'feelings', '')"><img src="img/Feelings1.png"/>
+                <audio id="feel">
+                  <source src="audio/feelings.ogg" type="audio/ogg">
+                </audio>
+              </td>
+            </tr>
+            <tr id="row">
+              <td onclick="document.getElementById('0').submit();"><form method="POST" action="/sent" id="0">
+                  <input id="message1" type="hidden" name="message" value="">
+              </form>
+              <br>Send
+              </td>
+              <td style="width:auto; height:auto" onmouseenter="playAudio('yum')" onclick="noshow('bins', 'food', '');"><img src="img/Food1.png"/>
+                <audio id="yum">
+                  <source src="audio/food.ogg" type="audio/ogg">
+                </audio>
+              </td>
+              <td style="width:auto; height:auto" onmouseover="playAudio('please')" onclick="/help"><img src="img/Help.png"/>
+                <audio id="please">
+                  <source src="audio/help.ogg" type="audio/ogg">
+                </audio>
+            </tr>
+        </table>
+
+        <table style="width:100%" id="body_parts" class="noshow">
+            <tr id="row">
+              <td style="width:auto; height:auto" onmouseover="playAudio('head')" onclick="noshow('body_parts', 'bins', 'head');"><img src="img/Head3.png"/>
+                <audio id="head">
+                  <source src="audio/head.ogg" type="audio/ogg">
+                </audio>
+              </td>
+              <td style="width:auto; height:auto" onmouseover="playAudio('face')" onclick="noshow('body_parts', 'bins', 'face');"><img src="img/Face3.png"/>
+                <audio id="face">
+                  <source src="audio/face.ogg" type="audio/ogg">
+                </audio>
+              </td>
+              <td style="width:auto; height:auto" onmouseover="playAudio('chest')" onclick="noshow('body_parts', 'bins', 'chest');"><img src="img/Chest3.png"/>
+                <audio id="chest">
+                  <source src="audio/chest.ogg" type="audio/ogg">
+                </audio>
+              </td>
+              <td style="width:auto; height:auto" onmouseover="playAudio('back')" onclick="noshow('body_parts', 'bins', 'back');"><img src="img/Back3.png"/>
+                <audio id="back">
+                  <source src="audio/back.ogg" type="audio/ogg">
+                </audio></td>
+            </tr>
+            <tr id="row">
+              <td  style="width:auto; height:auto" onmouseover="playAudio('arm')" onclick="noshow('body_parts', 'bins', 'arm');"><img src="img/Arm3.png"/>
+                <audio id="arm">
+                  <source src="audio/arm.ogg" type="audio/ogg">
+                </audio>
+              </td>
+              <td style="width:auto; height:auto" onmouseover="playAudio('leg')" onclick="noshow('body_parts', 'bins', 'leg');"><img src="img/Leg3.png"/>
+                <audio id="leg">
+                  <source src="audio/leg.ogg" type="audio/ogg">
+                </audio>
+              </td>
+              <td style="width:auto; height:auto" onmouseover="playAudio('shoulder')" onclick="noshow('body_parts', 'bins', 'shoulder');"><img src="img/Shoulder3.png"/>
+                <audio id="shoulder">
+                  <source src="audio/shoulder.ogg" type="audio/ogg">
+                </audio>
+              </td>
+              <td  onclick="document.getElementById('0').submit();">
+                <form method="POST" action="/sent" id="0">
+                  <input id="message3" type="hidden" name="message" value="">
+                </form>
+                <br>Send
+              </td>
+            </tr>
+        </table>
+    
+        <table style="width:100%" id="feelings" class="noshow">
+            <tr id="row">
+              <td style="width:auto; height:auto" onmouseover="playAudio('sad')" onclick="noshow('feelings', 'bins', 'sad');"><img src="img/Sad.png"/>
+                <audio id="sad">
+                  <source src="audio/sad.ogg" type="audio/ogg">
+                </audio>
+              </td>
+              <td style="width:auto; height:auto" onmouseover="playAudio('happy')" onclick="noshow('feelings', 'bins', 'happy');"><img src="img/Happy.png"/>
+                <audio id="happy">
+                  <source src="audio/happy.ogg" type="audio/ogg">
+                </audio>
+              </td>
+              <td style="width:auto; height:auto" onmouseover="playAudio('upset')" onclick="noshow('feelings', 'bins', 'upset');"><img src="img/Upset.png"/>
+                <audio id="upset">
+                  <source src="audio/upset.ogg" type="audio/ogg">
+                </audio>
+              </td>
+              <td style="width:auto; height:auto" onmouseover="playAudio('tired')" onclick="noshow('feelings', 'bins', 'tired');"><img src="img/Tired.png"/>
+                <audio id="tired">
+                  <source src="audio/tired.ogg" type="audio/ogg">
+                </audio>
+              </td>
+            </tr>
+            <tr id="row">
+              <td style="width:auto; height:auto" onmouseover="playAudio('afraid')" onclick="noshow('feelings', 'bins', 'afraid');"><img src="img/Worried.png"/>
+                <audio id="afraid">
+                  <source src="audio/afraid.ogg" type="audio/ogg">
+                </audio>
+              </td>
+              <td style="width:auto; height:auto" onmouseover="playAudio('hungry')" onclick="noshow('feelings', 'bins', 'hungry');"><img src="img/Hungry.png"/>
+                <audio id="hungry">
+                  <source src="audio/hungry.ogg" type="audio/ogg">
+                </audio>
+              </td>
+              <td style="width:auto; height:auto" onmouseover="playAudio('thirsty')" onclick="noshow('feelings', 'bins', 'thirsty');"><img src="img/Thirsty.png"/>
+                <audio id="thirsty">
+                  <source src="audio/thirsty.ogg" type="audio/ogg">
+                </audio>
+              </td>
+              <td onclick="document.getElementById('0').submit();"><form method="POST" action="/sent" id="0">
+                  <input id="message5" type="hidden" name="message" value="">
+              </form>
+              <br>Send
+              </td>
+            </tr>
+        </table>
+        
+        <table style="width:100%; height: 100vh" id="food" class="noshow">
+            <tr id="row">
+              <td onmouseover="playAudio('soup')" onclick="noshow('food', 'bins', 'soup');"><img src="img/Soup.png"/>
+              <audio id="soup">
+                  <source src="audio/soup.ogg" type="audio/ogg">
+              </audio>
+              </td>
+              <td onmouseover="playAudio('sushi')" onclick="noshow('food', 'bins', 'sushi');"><img src="img/Sushi.png"/>
+              <audio id="sushi">
+                  <source src="audio/sushi.ogg" type="audio/ogg">
+              </audio></td>
+              <td onmouseover="playAudio('apple')" onclick="noshow('food', 'bins', 'apple');"><img src="img/Apple.png"/>
+              <audio id="apple">
+                  <source src="audio/apple.ogg" type="audio/ogg">
+              </audio></td>
+              <td onmouseover="playAudio('pizza')" onclick="noshow('food', 'bins', 'pizza');"><img src="img/Pizza.png"/>
+              <audio id="pizza">
+                  <source src="audio/pizza.ogg" type="audio/ogg">
+              </audio></td>
+            </tr>
+            <tr id="row">
+              <td onmouseover="playAudio('ice')" onclick="noshow('food', 'bins', 'ice cream');"></td><img src="img/IceCrea.png"/>
+              <audio id="ice">
+                  <source src="audio/ice_cream.ogg" type="audio/ogg">
+              </audio></td>
+              <td onmouseover="playAudio('bread')" onclick="noshow('food', 'bins', 'bread');"><img src="img/Bread.png"/>
+              <audio id="bread">
+                  <source src="audio/bread.ogg" type="audio/ogg">
+              </audio></td>
+              <td onmouseover="playAudio('water')" onclick="noshow('food', 'bins', 'water');"><img src="img/Water.png"/>
+              <audio id="water">
+                  <source src="audio/water.ogg" type="audio/ogg">
+              </audio></td>
+              <td onclick="document.getElementById('0').submit();"><form method="POST" action="/sent" id="0">
+                  <input id="message7" type="hidden" name="message" value="">
+              </form>
+              <br>Send
+              </td>
+            </tr>
+        </table>
+        <h4 id="message2"></h4>
+          <script>
+              var message = "<%=@message%>";
+              // document.getElementById("message1").setAttribute('parameter', message);
+              document.getElementById("message1").setAttribute('value', message);
+              document.getElementById("message2").innerHTML=message;
+              
+              function noshow(table1, table2, word) {
+                  var addMessage = word;
+                  
+                  var id1 = document.getElementById(table1);
+                  var id2 = document.getElementById(table2);
+                  if (addMessage != '') {
+                      message = message + " " + addMessage;
+                  }
+                  $(id1).addClass('noshow');
+                  $(id1).removeClass('show')
+                  $(id2).removeClass('noshow');
+                  $(id2).addClass('show');
+                  document.getElementById("message1").setAttribute('value', message);
+                  document.getElementById("message2").innerHTML=message;
+                  document.getElementById("message3").setAttribute('value', message);
+                  document.getElementById("message5").setAttribute('value', message);
+                  document.getElementById("message7").setAttribute('value', message);
+              }
+          </script>
+
+              
+              
+    <!--          function del(message) {-->
+    <!--            var pos = message.lastIndexOf(" ");-->
+    <!--            if (pos != -1) {-->
+    <!--              message = message.substring(0, pos);-->
+    <!--            }-->
+    <!--            document.getElementById("message1").setAttribute('value', message);-->
+    <!--            document.getElementById("message2").innerHTML=message;-->
+    <!--            document.getElementById("message3").setAttribute('value', message);-->
+    <!--            document.getElementById("message4").innerHTML=message;-->
+    <!--            document.getElementById("message5").setAttribute('value', message);-->
+    <!--            document.getElementById("message6").innerHTML=message;-->
+    <!--            document.getElementById("message7").setAttribute('value', message);-->
+    <!--            document.getElementById("message8").innerHTML=message;-->
+    <!--          }-->
+            
+    <!--      </script>-->
+</div>
+
+
+
+    <div id = "yeet">
+      <canvas id="plotting_canvas" width="1440" height="772" style="cursor: crosshair; position: fixed;"></canvas>
+
+        <script src="WebGazer_Demo_files/jquery.min.js"></script>
+        <script src="WebGazer_Demo_files/sweetalert.min.js"></script>
+
+        <script src="WebGazer_Demo_files/main.js"></script>
+        <script src="WebGazer_Demo_files/calibration.js"></script>
+        <script src="WebGazer_Demo_files/precision_calculation.js"></script>
+        <script src="WebGazer_Demo_files/precision_store_points.js"></script>
+
+        <nav id="webgazerNavbar" class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <!-- The hamburger menu button -->
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <!-- Accuracy -->
+                <li id="Accuracy"><a>Not yet Calibrated</a></li>
+                <!--<li onclick="Restart()"><a href="https://webgazer.cs.brown.edu/calibration.html?#">Recalibrate</a></li>-->
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><button class="helpBtn" data-toggle="modal" data-target="#helpModal"><a data-toggle="modal"><span class="glyphicon glyphicon-cog"></span> Help</a></button></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- Calibration points -->
+        <div class="calibrationDiv">
+            <input type="button" class="Calibration" id="Pt1" style="background-color: red; opacity: 0.2;">
+            <input type="button" class="Calibration" id="Pt2" style="background-color: red; opacity: 0.4;">
+            <input type="button" class="Calibration" id="Pt3" style="background-color: red; opacity: 0.2;">
+            <input type="button" class="Calibration" id="Pt4" style="background-color: red; opacity: 0.2;">
+            <input type="button" class="Calibration" id="Pt5" style="background-color: red; opacity: 0.2; display: none;">
+            <input type="button" class="Calibration" id="Pt6" style="background-color: red; opacity: 0.2;">
+            <input type="button" class="Calibration" id="Pt7" style="background-color: red; opacity: 0.2;">
+            <input type="button" class="Calibration" id="Pt8" style="background-color: red; opacity: 0.2;">
+            <input type="button" class="Calibration" id="Pt9" style="background-color: red; opacity: 0.2;">
+        </div>
+
+         Modal 
+        <div id="helpModal" class="modal fade" role="dialog" style="display: none;">
+          <div class="modal-dialog">
+
+             Modal content
+            <div class="modal-content">
+              <div class="modal-body">
+                <img src="./WebGazer_Demo_files/calibration.png" width="100%" height="100%" alt="webgazer demo instructions">
+              </div>
+              <div class="modal-footer">
+                <button id="closeBtn" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="Restart()">Calibrate</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="WebGazer_Demo_files/resize_canvas.js"></script>
+        <script src="WebGazer_Demo_files/bootstrap.min.js"></script>
+
+
+<canvas width="11px" height="781px" id="renderCanvas" style="display:none;"></canvas><canvas width="11px" height="781px" id="renderCanvas" style="display:none;"></canvas><video id="webgazerVideoFeed" autoplay="" style="display: block; position: fixed; top: 0px; left: 0px; width: 320px; height: 240px;"></video><canvas id="webgazerVideoCanvas" width="640" height="480" style="display: none;"></canvas><canvas id="webgazerFaceOverlay" width="640" height="480" style="display: block; position: fixed; top: 0px; left: 0px; width: 320px; height: 240px;"></canvas><canvas id="webgazerFaceFeedbackBox" style="display: block; position: fixed; border: solid red; top: 40.8px; left: 80.8px; width: 158.4px; height: 158.4px;"></canvas><div class="swal-overlay" tabindex="-1"><div class="swal-modal" role="dialog" aria-modal="true"><div class="swal-title" style="">Calibration</div><div class="swal-text" style="">Please click on each of the 9 points on the screen. You must click on each point 5 times till it goes yellow. This will calibrate your eye movements.</div>
+
+    <!-- Footer -->
+        <footer class="bg-black small text-center text-white-50">
+          <div class="container" style="color:white">
+            Copyright &copy; VITAMIN SEE 2018
+          </div>
+          </footer>
+</div>
+
+        
+   
+    <!-- Bootstrap core JavaScript -->
+    <!--<script src="vendor/jquery/jquery.min.js"></script>-->
+    <script type="text/script" src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/grayscale.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+
+  </body>
+</html>
